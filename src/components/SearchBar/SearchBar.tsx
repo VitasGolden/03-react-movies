@@ -13,7 +13,7 @@ export default function SearchBar({ onSubmit }: SearchBarProps) {
 			toast.error('Please enter your search query.')
 			return
 		}
-		onSubmit(query)
+		onSubmit(query.trim())
 	}
 
 	return (
