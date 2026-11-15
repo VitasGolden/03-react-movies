@@ -1,5 +1,12 @@
 import axios from 'axios'
-import type { MoviesHttpResponse } from '../types/movie'
+import type { Movie } from '../types/movie'
+
+export interface MoviesHttpResponse {
+	page: number
+	results: Movie[]
+	total_pages: number
+	total_results: number
+}
 
 const tmdbKey = import.meta.env.VITE_TMDB_TOKEN
 
